@@ -1,0 +1,46 @@
+<div>
+  <div class="max-w-sm rounded overflow-hidden shadow-lg">
+    <img class="w-full" src="../../assets/img/tsWork.png" alt="Sunset in the mountains">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">Módulo 1</div>
+      <div>
+        contador módulo2: {{ getCountModule2 }}
+      </div>
+      <div class="pt-2">
+        <div>
+          <button
+            @click="setCountModule2(countModule2 + 1)"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Sumar
+          </button>
+          <button
+            @click="setCountModule2(countModule2 - 1)"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Restar
+          </button>
+        </div>
+      </div>
+      <transition name="fade">
+        <div class="pt-2 pb-2" v-if="!authenticated">
+          <p class="text-red-500 text-xs italic">Por favor inicie sesión</p>
+        </div>
+      </transition>
+    </div>
+    <div class="px-6 py-4">
+      <span
+        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+        >#typescript</span
+      >
+      <span
+        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+        >#nuxt</span
+      >
+      <span
+        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+        >#tailwind</span
+      >
+    </div>
+  </div>
+</div>
